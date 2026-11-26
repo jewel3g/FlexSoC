@@ -67,3 +67,8 @@ Technical feedback and component evaluation support are welcome. Manufacturer na
 Licensing is pending clarification. Do not assume an open-source license until a valid license is published.
 
 [Engineering portfolio](https://jewel3g.github.io)
+
+## Design documentation
+
+- [Design review checklist](docs/design-review.md)
+- [Proposed interface matrix](docs/interface-matrix.md)
