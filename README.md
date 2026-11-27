@@ -72,3 +72,23 @@ Licensing is pending clarification. Do not assume an open-source license until a
 
 - [Design review checklist](docs/design-review.md)
 - [Proposed interface matrix](docs/interface-matrix.md)
+
+## Engineering design gates
+
+| Gate | Required evidence before closure |
+|---|---|
+| Power integrity | Rail load budget, sequencing matrix, transient measurements and reset behavior |
+| DDR | Verified ball mapping, vendor routing constraints, training logs and memory stress results |
+| High-speed interfaces | Lane mapping, reference clocks, impedance and return-path review, link enumeration |
+| BSP | Versioned device tree, boot logs, peripheral enumeration and recovery procedure |
+| Manufacturing | ERC/DRC disposition, stackup approval, assembly drawings and bring-up checklist |
+
+### Proposed bring-up sequence
+
+1. Inspect assembly and measure rail resistance with power removed.
+2. Apply current-limited power and capture sequencing, clocks and reset.
+3. Establish boot console and recovery path before enabling high-speed peripherals.
+4. Validate DDR training and stress testing, then enumerate interfaces individually.
+5. Record board revision, firmware commit, instrument settings and test evidence.
+
+These are planned acceptance gates, not completed tests.
